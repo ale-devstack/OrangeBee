@@ -10,7 +10,6 @@
       --success: #28a745;
       --border: #dee2e6;
     }
-    
 
     * {
       margin: 0;
@@ -82,6 +81,9 @@
       height: 48px;
       transition: transform 0.3s ease;
       margin-right: 8px;
+      width: auto;
+      max-width: 48px;
+      object-fit: contain;
     }
 
     .brand:hover img {
@@ -95,8 +97,8 @@
       display: flex;
       gap: 40px;
       align-items: center;
-      font-weight: 500;
-      font-size: 0.95rem;
+      font-weight: 600;
+      font-size: 1rem;
     }
 
     .nav-links a { 
@@ -229,6 +231,13 @@
       animation: fadeInUp 0.8s ease 0.4s backwards;
     }
 
+    /* Ocultar párrafo en móviles */
+    @media (max-width: 991px) {
+      .hero p {
+        display: none;
+      }
+    }
+
     .hero-actions {
       margin-top: 40px;
       display: flex;
@@ -287,6 +296,13 @@
       flex-wrap: wrap;
       animation: fadeInUp 0.8s ease 0.8s backwards;
       justify-content: center;
+    }
+
+    /* Ocultar stats en dispositivos pequeños */
+    @media (max-width: 991px) {
+      .hero-stats {
+        display: none;
+      }
     }
 
     .stat-item {
@@ -942,23 +958,13 @@
       }
 
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         line-height: 1.2;
       }
 
       .hero p {
         margin-left: auto;
         margin-right: auto;
-      }
-
-      .hero-stats {
-        gap: 30px;
-        margin-top: 40px;
-      }
-
-      .stat-item {
-        flex: 1 1 calc(50% - 15px);
-        min-width: 100px;
       }
 
       .section-title {
@@ -1015,20 +1021,21 @@
       }
 
       .brand {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
 
       .brand img {
-        height: 35px;
+        height: 32px;
+        max-width: 32px;
       }
 
       .hero {
-        padding: 90px 0 50px 0;
+        padding: 80px 0 40px 0;
         min-height: auto;
       }
 
       .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.65rem;
         margin-bottom: 15px;
       }
 
@@ -1054,23 +1061,6 @@
         justify-content: center;
         padding: 14px 24px;
         font-size: 1rem;
-      }
-
-      .hero-stats {
-        margin-top: 35px;
-        gap: 20px;
-      }
-
-      .stat-item {
-        flex: 1 1 100%;
-      }
-
-      .stat-number {
-        font-size: 2rem;
-      }
-
-      .stat-label {
-        font-size: 0.85rem;
       }
 
       section {
@@ -1179,10 +1169,6 @@
         max-width: 600px;
       }
 
-      .stat-item {
-        flex: 0 1 auto;
-      }
-
       .features-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1199,11 +1185,16 @@
     /* Extra small devices */
     @media (max-width: 375px) {
       .hero h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
 
-      .stat-number {
-        font-size: 1.75rem;
+      .brand {
+        font-size: 1.1rem;
+      }
+
+      .brand img {
+        height: 28px;
+        max-width: 28px;
       }
 
       .btn-primary-custom,
@@ -1234,6 +1225,27 @@
       max-width: 100%;
       height: auto;
       display: block;
+    }
+
+    /* Optimización de imágenes responsive */
+    @media (max-width: 768px) {
+      img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+      }
+      
+      .brand img {
+        height: 32px;
+        max-width: 32px;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .brand img {
+        height: 38px;
+        max-width: 38px;
+      }
     }
 
     /* Prevent horizontal scroll */
