@@ -93,13 +93,13 @@
     
     if (width <= 768) {
       // Mobile: imagen más pequeña
-      hero.style.backgroundImage = "linear-gradient(rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.8)), url('/img/-oLsu_f_IJJDfbKmR0Qz_scWphAp8fXx9rIAiQo4CGlCW1Jyi3wCxkWcucVubqVvjiY49ie5WMzoJannvU_4MKJm-MbKs9Ajx8ZopZsCvBs.jpeg')";
+      hero.style.backgroundImage = "linear-gradient(rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.8)), url('../img/hero-mobile.webp')";
     } else if (width <= 1200) {
       // Tablet: imagen mediana
-      hero.style.backgroundImage = "linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.75)), url('/img/hero-tablet.webp')";
+      hero.style.backgroundImage = "linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.75)), url('../img/hero-tablet.webp')";
     } else {
       // Desktop: imagen completa
-      hero.style.backgroundImage = "linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.75)), url('/img/hero-desktop.webp')";
+      hero.style.backgroundImage = "linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.75)), url('../img/hero-desktop.webp')";
     }
   }
 
